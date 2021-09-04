@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include <iostream>
 #include <string>
 #include "Menu.h"
@@ -10,6 +11,7 @@ Menu* menu;
 
 int main()
 {
+	system("CLS");
 	Snake newGame;
 	newGame.run();
 	newGame.setUp();
@@ -19,7 +21,8 @@ int main()
 
 // Desktop\Project games\Teste 2
 
-//g++ "MainFile.cpp" "Map.cpp" "Entity.cpp" "MapEntity.cpp" "Menu.cpp" "Option.cpp" "Game.cpp" "SnakeGame.cpp" "SnakeEntity.cpp"
+//	g++ "MainFile.cpp" "Map.cpp" "Entity.cpp" "MapEntity.cpp" "Menu.cpp" "Option.cpp" "Game.cpp" "SnakeGame.cpp" "SnakeEntity.cpp"
+
 
 
 

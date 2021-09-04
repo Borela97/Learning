@@ -9,8 +9,8 @@
 
 class MapEntity: public Map {
 public:
-	MapEntity();
-	MapEntity(size_t xSize, size_t ySize) : Map (xSize, ySize) {};
+	MapEntity() {};
+	MapEntity(int xSize, int ySize) : Map(xSize, ySize) {};
 	virtual ~MapEntity() {} ;
 public:
 	void addEntity(Entity* entityToAdd);

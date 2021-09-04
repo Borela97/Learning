@@ -13,8 +13,8 @@
 
 class Map {
 public: 
-	Map()  : xSize(PATTERN_MAP_SIZE_X), ySize(PATTERN_MAP_SIZE_Y), matrixMap(new int[ index(xSize,ySize)] ) {clearMatrix();};
-	Map(const size_t xSize, const size_t ySize) : xSize(xSize), ySize(ySize), matrixMap(new int[ index(xSize,ySize)] ) {clearMatrix();};
+	Map()  : xSize(PATTERN_MAP_SIZE_X), ySize(PATTERN_MAP_SIZE_Y), matrixMap(new int[xSize*ySize]) {clearMatrix();};
+	Map(const int xSize, const int ySize) : xSize(xSize), ySize(ySize), matrixMap(new int[xSize*ySize]) {clearMatrix();};
 	int getFullSize();
 	virtual ~Map();
 	virtual void showMap();
@@ -24,12 +24,12 @@ public:
 	virtual void setYSize(int size);
 	virtual int getValueMap(int xPosition, int yPosition);
 	virtual void putValueInMap(int xPosition, int yPosition, int value);
-	size_t index( int x, int y ) const { return x + ySize * y; }
+	int index( int x, int y ) const {return x + ySize * y; }
 private:
 	void clearMatrix();
 	int* matrixMap;
 	size_t xSize {0};
-	size_t ySize {0};
+	int ySize {0};
 };
 
 

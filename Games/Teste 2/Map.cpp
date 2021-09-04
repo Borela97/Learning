@@ -13,9 +13,10 @@ void Map::setYSize(int ySize){
 }
 
 void Map::showMap(){
+		std::cout << std::endl;
 	for(int i = 0; i < getXSize(); i++){
 		for(int j = 0; j< getYSize(); j++) {
-			getValueMap(j,i) == 99 ? std::cout <<  " " : std::cout << getValueMap(j,i);
+			getValueMap(j,i) == 99 ? std::cout << " " : std::cout << getValueMap(j,i);
 		}
 		std::cout << std::endl;
 	}
@@ -34,7 +35,7 @@ int Map::getYSize(){
 
 void Map::clearMatrix(){
 	for(int i = 0; i < getXSize(); i++){
-		for(int j = 0; j< getYSize(); j++) {
+		for(int j = 0; j < getYSize(); j++) {
 			putValueInMap(j , i , 99);
 		}
 	}	

@@ -1,12 +1,9 @@
 #include "SnakeGame.h"
 
 void Snake::setUp(){
-	std::cout << "Irei criar o jogo :)" << std::endl;
-	MapSnake = new MapEntity(20, 20);
+	MapSnake = new MapEntity(10,10);
 	Snake = new SnakeEntity(3,1);
-
-	MapSnake -> addEntity(Snake);
-	std::cout << "Mapa Criado" << std::endl;
+	MapSnake -> addEntity(3,3,3,3);
 	MapSnake -> showMap();
 }
 
